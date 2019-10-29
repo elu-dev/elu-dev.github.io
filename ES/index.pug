@@ -1,0 +1,51 @@
+!!! 5
+html(lang="es")
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Website
+        
+        //- Style
+        link(rel="stylesheet" href="../style.css")
+        
+        //- Font Awesome
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    body
+        .landing
+            img(src="../assets/Logo ELU.png" alias="logo").logo
+            ul
+                li
+                    a(href="#about-me") Sobre Mi
+                li
+                    a(href="#projects") Proyectos
+                li
+                    a(href="#") Contacto
+        
+        .about-section
+            .about-me#about-me
+                .container
+                    h2 Sobre Mi
+                    ul
+                        li
+                            img(src="../assets/profile.png")
+                            h3 Edgar Lugo
+                        li
+                            p <span>Full Stack Developer</span> | <span>SEO</span>
+                            p HTML/CSS, JS, Python y PHP
+                            p Amante de la tecnología | <script>document.write(Math.floor((new Date() - new Date('July, 8, 1999'))/31_557_600_000))</script> años
+                            p Ingeniería de Computación
+                            p Universidad José Antonio Páez, Venezuela (2016 - inconcluso)
+        .projects#projects
+            .container
+                h2 Proyectos
+                .project-grid
+                    section
+                        a(href="https://glitch.com/~hypercube" target="_blank").project
+                            iframe(loading="lazy" src="https://hypercube.glitch.me/").interactive
+                            header Hipercubo (malla)
+                            label Representación ortográfica de cubo 4D, JavaScript
+                    section
+                        a(href="https://glitch.com/~hypercube" target="_blank").project
+                            iframe(loading="lazy" src="https://hypercube.glitch.me/").interactive
+                            header Hipercubo (malla)
+                            label Representación ortográfica de cubo 4D, JavaScript
