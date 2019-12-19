@@ -248,6 +248,8 @@ iframe {
 footer {
     text-align: left;
     margin: 20px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
     color: #AAA;
 }
 
