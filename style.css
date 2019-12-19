@@ -128,7 +128,7 @@ h2 {
     color: white;
 }
 
-.about-me p:nth-child(3) {
+.about-me p:nth-child(2), .about-me p:nth-child(4) {
     padding: .7em 0;
 }
 
@@ -247,6 +247,7 @@ iframe {
 
 footer {
     text-align: left;
+    line-height: 1.5em;
     margin: 20px;
     margin-bottom: 0;
     padding-bottom: 20px;
