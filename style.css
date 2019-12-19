@@ -283,11 +283,11 @@ footer {
 
     .about-me li {
         padding-bottom: 30px;
+        padding-right: 2em;
     }
 
     .about-me img {
         width: 280px;
-        margin-right: 2em;
     }
 
     .about-me li {
@@ -296,7 +296,8 @@ footer {
     
     .about-me li:last-child {
         margin: auto 0;
-        padding: 30px 0;
+        padding: 30px 0 30px 30px;
         border-left: 1px solid white;
+        text-align: left;
     }
 }
