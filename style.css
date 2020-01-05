@@ -1,4 +1,3 @@
-/* ----- GENERAL ----- */
 html { scroll-behavior: smooth; }
 html, body {
     margin: 0;
@@ -17,16 +16,49 @@ html, body {
     padding: .8em 1.2em;
 }
 
+/* ----- ANIMATIONS ----- */
+.anim {
+    opacity: 0;
+    position: relative;
+    bottom: -30px;
+    transition-property: opacity, bottom;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+
+.anim-fadein {
+    opacity: 100%;
+    position: relative;
+    bottom: 0;
+}
+
 /* ----- LANDING SECTION ----- */
 .landing {
-    height: 110%;
+    height: 100%;
     width: 100%;
-    background: url(assets/bg-pic.webp);
+    background: url(assets/bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     display: table;
-    margin-bottom: 1%;
+    /* margin-bottom: 1%; */
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, .75);
+}
+
+.landing-content {
+    position: relative;
+    z-index: 3;
 }
 
 .landing img {
@@ -54,42 +86,23 @@ html, body {
 .landing a {
     text-decoration: none;
     color: white;
+    transition: text-shadow .1s, color .1s;
 }
 
 .landing a:hover {
-    color: #0A0;
+    color: #0C0;
+    text-shadow: 0 0 10px #0C0;
 }
 
 /* ----- ABOUT SECTION ----- */
 .about-section {
+    background-color: #1C1C1C;
     margin: 0;
     position: relative;
 }
 
-.about-section::before {
-    content: "";
-    width: 100%;
-    height: 150px;
-    top: -40px;
-    background-color: black;
-    position: absolute;
-    z-index: -1
-}
 
-.about-me {
-    background-color: #1C1C1C;
-    width: 100%;
-    position: relative;
-    top:-40px;
-    z-index: 1;
-    transform: skewY(-6deg);
-}
-
-.about-me .container {
-    transform: skewY(6deg);
-}
-
-h2 {
+.about-me h2 {
     font-weight: lighter;
     font-size: 2.5em;
     text-align: center;
@@ -124,17 +137,23 @@ h2 {
     color: white;
 }
 
-.about-me p:nth-child(2), .about-me p:nth-child(4) {
-    padding: .7em 0;
+.about-me p:nth-child(3) {
+    padding-bottom: .5em;
 }
 
 .about-me p span {
-    color: #0C0;
+    color: #0B0;
 }
 
 /* ----- PROJECTS SECTION ----- */
 .projects {
     background-color: #121212;
+}
+
+.projects h2 { 
+    font-weight: lighter;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 .project-grid {
@@ -212,6 +231,9 @@ iframe {
 }
 .contact h2 {
     margin: 20px 0;
+    font-weight: lighter;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 .contact p {
@@ -257,11 +279,11 @@ footer {
 
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
     .landing ul {
         display: flex;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        /* border-top: 1px solid white; */
+        /* border-bottom: 1px solid white; */
         width: 80%;
         margin: 0 auto;
         padding-top: 5px;
@@ -282,7 +304,6 @@ footer {
 
     .about-me li {
         padding-bottom: 30px;
-        padding-right: 2em;
     }
 
     .about-me img {
@@ -291,6 +312,7 @@ footer {
 
     .about-me li {
         margin: 0 auto;
+        margin-right: 30px;
     }
     
     .about-me li:last-child {
