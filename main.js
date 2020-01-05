@@ -1,13 +1,9 @@
 
 function isVisible(elem) {
-    var bounding = elem.getBoundingClientRect();
-    return (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-};
+    const bounding = elem.getBoundingClientRect();
+    const middle = bounding.top + bounding.height / 2
+    return middle >= 0 && middle <= (window.innerHeight || document.documentElement.clientHeight)
+}
 
 function checkElements() {
     let elements = document.getElementsByClassName("anim")
