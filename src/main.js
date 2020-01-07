@@ -10,7 +10,7 @@ function checkElements() {
     for (let i = 0; i < elements.length; ++i) {
         let elem = elements[i]
         if (isVisible(elem)) {
-            elem.style['transition-delay'] = Math.random() * 0.3 + 's'
+            elem.style['transition-delay'] = Math.random() * 0.4 + 's'
             elem.classList.add('anim-fadein')
         }
     }
