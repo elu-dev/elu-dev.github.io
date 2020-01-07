@@ -18,6 +18,7 @@ for (current_path, _, files) in os.walk('./src'):
 
         with urllib.request.urlopen(req) as res:
             new_data = res.read().decode('utf-8')
+            if filename[-2:] == 'ml': new_data = new_data.replace('\n','')
             publicpath = fullpath.replace('src','public', 1)
 
             with open(publicpath, 'w') as f: f.write(new_data)
