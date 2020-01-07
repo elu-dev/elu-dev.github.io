@@ -13,8 +13,8 @@ for (current_path, _, files) in os.walk('./src'):
         print(f'minimizing {filename}...')
         fullpath = f'{current_path}/{filename}'
 
-        data = open(fullpath, mode='rb').read()
-        data = urllib.parse.urlencode({'input': data}).encode('ascii')
+        data = open(fullpath, mode='r').read().encode('utf-8')
+        data = urllib.parse.urlencode({'input': data}).encode('utf-8')
         req = urllib.request.Request(url=APIS[filename[-2:]], data=data, method='POST')
 
         with urllib.request.urlopen(req) as res:
