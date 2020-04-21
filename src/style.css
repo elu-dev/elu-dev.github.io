@@ -67,10 +67,21 @@ body {
     letter-spacing: .3em;
     padding-left: .3em;
     font-size: 1em;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     position: relative;
     z-index: -2;
+}
+
+.lango {
+    display: block;
+    text-decoration: none;
+    color: rgb(106, 102, 110);
+    margin-bottom: 30px;
+}
+
+.lango:hover {
+    color: rgb(153, 152, 153);
 }
 
 .gradient-bg {
