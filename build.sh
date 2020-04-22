@@ -1,3 +1,4 @@
+rm -Rf elu-dev.github.io
 git clone --depth=1 --branch=master https://github.com/elu-dev/elu-dev.github.io
 
 echo ""
@@ -23,7 +24,7 @@ read msg
 git config --local user.name x
 git config --local user.email build-script
 
-# git commit -am "$msg"
+git commit -am "$msg"
 
 echo ""
 echo "-----------"
@@ -31,4 +32,5 @@ echo ""
 
 git push
 
+echo "run rm -Rf elu-dev.github.io"
 rm -Rf elu-dev.github.io
