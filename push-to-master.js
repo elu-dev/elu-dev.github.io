@@ -9,12 +9,12 @@ const rl = readline.createInterface({
 function run(cmd, callback) {
     exec(cmd, (error, stdout, stderr) => {
         if (error) {
-            console.log(`error: ${error.message}`);
+            console.log(`${error.message}`);
             return
         }
-        if (stderr) console.log(`stderr: ${stderr}`)
+        if (stderr) console.log(`${stderr}`)
 
-        console.log(`stdout: ${stdout}`);
+        console.log(`${stdout}`);
         if (callback) callback()
     })
 }
@@ -26,8 +26,8 @@ const REPO_NAME = 'elu-dev.github.io'
 
 run(`git clone --depth=1 --branch=master ${REPO}`, 
     () => run('python3 minify-src.py',
-        () => run(`cd ${REPO_NAME}`,
-            () => rl.question('Commit msg',
+        () => run(`cd ${REPO_NAME}; git status`,
+            () => rl.question('commit msg: ',
                 msg => run(`git commit -am "${msg}"`,
                     () => run('git push',
                         () => run(`rm -Rf ${REPO_NAME}`)
