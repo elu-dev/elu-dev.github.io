@@ -1,4 +1,4 @@
-import os, urllib.parse, urllib.request, subprocess as cmd
+import os, urllib.parse, urllib.request
 
 # APIs
 APIS = {
