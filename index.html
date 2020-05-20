@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edgar Lugo Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <div id="bg"></div>
+
+    <!-- main -->
+
+    <div id="main" class="section">
+        <img class="show-up-slower" src="assets/Logo 4D.png" alt="Logo">
+        <div class="anim-container">
+            <h1 class="fade-in-slower">Edgar Lugo</h1>
+            <h2 class="typewriter">think in <strong>higher dimensions</strong></h2>
+        </div>
+
+        <a href="/en" class="lango fos">&lt;<b>ESP</b>/ENG&gt;</a>
+
+        <a onclick="_scrollTo('about')" class="fade-in-slower">
+            <svg width="100" height="100" class="hvr">
+                <line x1="5"  y1="50" x2="52" y2="95" style="fill:none;stroke-width:7;stroke:white" />
+                <line x1="95" y1="50" x2="48" y2="95" style="fill:none;stroke-width:7;stroke:white" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- about -->
+
+    <div id="about" class="section">
+        <h1 class="fos"><strong>&lt; Sobre mi &gt;</strong></h1>
+        <p class="fos">
+            Hola, soy un español de 20 años que ha pasado los últimos 5 programando.
+        </p>
+        <p class="fos">
+            Me gusta explorar los distintos aspectos del mundo tech y <strong>mi objetivo es cambiar la vida de las personas</strong> usando ese conocimiento.
+        </p>
+        <p class="fos">
+            Dispuesto a: <br> <span>[Trabajo Remoto]</span> <br> <span>[Reubicarme]</span>
+        </p>
+    </div>
+
+    <!-- skills -->
+
+    <div id="skills" class="section">
+        <h1 class="fos"><strong>&lt; Skills &gt;</strong></h1>
+        <div class="row">
+            <p class="col-33 fos">
+                <span>== General ==</span><br>
+                Git, Rest API, AJAX, OAuth, Escalabilidad, Testing
+            </p>
+            <p class="col-33 fos">
+                <span>== FrontEnd ==</span><br>
+                HTML, CSS, JavaScript, React, Redux, React Router, Bootstrap, JQuery
+            </p>
+            <p class="col-33 fos">
+                <span>== BackEnd ==</span><br>
+                JS (Express, Passport) <br>
+                Python (numpy, keras, cv2) <br>
+                Java (JSF, EJB, JPA) <br>
+                PHP (Laravel)
+            </p>
+        </div>
+    </div>
+
+    <!-- projects -->
+
+    <div id="projects" class="section">
+        <h1 class="fos spanish-fix"><strong>&lt; Proyectos &gt;</strong></h1>
+        <div class="row">
+            <div class="project col-50 fos">
+                <h3><span><a href="https://github.com/elu-dev/React-Pokedex" target=_blank rel="noopener noreferrer">
+                    React Pokedex
+                </a></span></h3>
+                <p>
+                    Enseña los pokemon/tipos que buscas, consume la PokeAPI. <br>
+                    (JS + React)
+                    <div class="links">
+                        [<a href="https://elu.wtf/react-pokedex" target=_blank rel="noopener noreferrer">PROBAR</a>]
+                        [<a href="https://github.com/elu-dev/react-pokedex" target=_blank rel="noopener noreferrer">CODIGO</a>]
+                    </div>
+                </p>
+            </div>
+            <div class="project col-50 fos">
+                <h3><span><a href="https://github.com/elu-dev/weeber" target=_blank rel="noopener noreferrer">
+                    Weeber
+                </a></span></h3>
+                <p>
+                    Clon de Twitter que registra Usuarios, Comentarios y Likes. <br>
+                    (PHP & Java stacks)
+                    <div class="links">
+                        [<a href="https://github.com/elu-dev/weeber" target=_blank rel="noopener noreferrer">CODE</a>]
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="project col-50 fos">
+                <h3><span><a href="https://github.com/elu-dev/ima-gen" target=_blank rel="noopener noreferrer">
+                    ImaGen
+                </a></span></h3>
+                <p>
+                    Web App que genera un pixel art a partir de tu Google Auth ID. <br>
+                    (Node + Express + Passport)
+                    <div class="links">
+                        [<a href="https://ima-gen.herokuapp.com/" target=_blank rel="noopener noreferrer">PROBAR</a>]
+                        [<a href="https://github.com/elu-dev/ima-gen" target=_blank rel="noopener noreferrer">CODIGO</a>]
+                    </div>
+                </p>
+            </div>
+            <div class="project col-50 fos">
+                <h3><span><a href="https://github.com/EDDxample/4D-Polytope-Visualizer__Processing" target=_blank rel="noopener noreferrer">
+                    4D Polytope Visualizer
+                </a></span></h3>
+                <p>
+                    Renderiza las secciones 3D de objetos 4D. <br>
+                    (Processing / Java + OpenGL)
+                    <div class="links">
+                        [<a href="https://github.com/EDDxample/4D-Polytope-Visualizer__Processing" target=_blank rel="noopener noreferrer">CODE</a>]
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+
+    <div id="contact" class="section fos">
+        <h1><strong>&lt; Contacto &gt;</strong></h1>
+        <p>
+            <b>Email:</b>
+            <span>elu.developer@gmail.com</span>
+        </p>
+        <p>
+            <b>GitHub (web dev):</b>
+            <span><a href=https://github.com/elu-dev target=_blank rel="noopener noreferrer">https://github.com/elu-dev</a></span>
+        </p>
+        <p>
+            <b>GitHub (personal):</b>
+            <span><a href=https://github.com/EDDxample target=_blank rel="noopener noreferrer">https://github.com/EDDxample</a></span>
+        </p>
+    </div>
+
+    <!-- footer -->
+
+    <footer><strong> Edgar Lugo &copy; 2020</strong></footer>
+<script src="index.js"></script>
+</body>
+</html>
